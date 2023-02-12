@@ -1,0 +1,202 @@
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  color: #2f3842;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6b13f;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c19b27;
+  border-radius: 10px;
+}
+.cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 400px;
+  max-height: 400px;
+  z-index: -1;
+  background: url("../images/cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 26%);
+}
+section {
+  background: #f2f2f2;
+  border-bottom: 1px solid #d6b13f;
+  padding: 8px 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.row div {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.row div a {
+  text-decoration: none;
+  color: #2f3842;
+}
+
+.row div i {
+  color: #d6b13f;
+  margin-right: 10px;
+  font-weight: 600;
+}
+.nav-bar {
+  margin-top: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-bar .menu {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 50%;
+  margin: auto;
+  justify-content: flex-start;
+  z-index: 100;
+  text-align: center;
+  background: #f2f2f2;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 18px 18px;
+  border-radius: 35px;
+}
+.nav-bar .menu a {
+  text-decoration: none;
+  color: #2f3842;
+}
+.nav-bar .menu a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 4px;
+  position: relative;
+  z-index: 7;
+  background-color: transparent;
+  transition: all ease-in-out 0.4s;
+}
+.nav-bar .menu a:hover::after {
+  background-color: #50317f;
+  width: 100%;
+}
+
+.nav-bar .menu a:hover {
+  color: #50317f;
+}
+.nav-bar .menu i {
+  margin-right: 10px;
+  color: #50317f;
+}
+.services-container {
+  min-width: 100%;
+  height: 150px;
+  text-align: center;
+  font-size: 40px;
+  color: #50317f;
+}
+.services-container > h1::after {
+  content: "";
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 380px;
+  height: 3px;
+  background-color: #c19b27;
+  text-align: center;
+  z-index: 7;
+}
+.services {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 30px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.services .service-1 {
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+  margin: 10px auto;
+  background: url("../images/service1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.services .service-2 {
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+  margin: 10px auto;
+  background: url("../images/service2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.services .service-3 {
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+  margin: 10px auto;
+  background: url("../images/service3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.services div h1 {
+  background-color: rgb(242, 242, 242, 0.4);
+  text-transform: uppercase;
+  padding: 13px 5px;
+  margin: 50px 0;
+  color: #2f3842;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: all ease-in-out 0.4s;
+}
+.services div:hover h1 {
+  background-color: rgb(242, 242, 242, 0.8);
+  color: #50317f;
+}
+.services div p {
+  background: rgb(242, 242, 242, 0.8);
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 100px;
+  opacity: 0;
+  border-top: solid 3px #c19b27;
+  transition: all 0.4s ease-in-out;
+}
+.services div:hover p {
+  opacity: 1;
+}

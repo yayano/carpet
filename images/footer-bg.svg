@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1920"
+   height="402"
+   viewBox="0 0 1920 402"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="footer-bg.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.30729167"
+     inkscape:cx="706.16949"
+     inkscape:cy="514.16949"
+     inkscape:window-width="1302"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g14" />
+  <defs
+     id="defs10">
+    <clipPath
+       id="a">
+      <rect
+         width="1920"
+         height="402"
+         transform="translate(0 9178)"
+         fill="#fff"
+         stroke="#707070"
+         stroke-width="1"
+         id="rect2" />
+    </clipPath>
+    <linearGradient
+       id="b"
+       x1="-263.90823"
+       y1="2371.4988"
+       x2="1844.913"
+       y2="2568.9243"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.7632098,0.56714749)">
+      <stop
+         offset="0"
+         stop-color="#8261fe"
+         id="stop5"
+         style="stop-color:#c19b00;stop-opacity:1;" />
+      <stop
+         offset="1"
+         stop-color="#bc4cd9"
+         id="stop7"
+         style="stop-color:#f2f2f2;stop-opacity:1;" />
+    </linearGradient>
+  </defs>
+  <g
+     transform="translate(0 -9178)"
+     clip-path="url(#a)"
+     id="g14">
+    <path
+       d="m 1029.4407,1278.9344 c 546.02,-25.077 697.8183,-186.1054 1045.0743,-88.4424 347.256,97.663 548.8,373.621 394.312,550.639 -154.488,177.018 -682.528,160.91 -994.06,192.342 -311.532,31.432 -723.977,138.625 -1091,96.715 -367.023,-41.91 -578.848,-398.179 -578.848,-398.179 0,0 -73.588,-136.66 57.6,-372 131.188,-235.34 620.90168,44.0024 1166.9217,18.9254 z"
+       fill="url(#b)"
+       id="path12"
+       sodipodi:nodetypes="ssssscss"
+       style="fill:url(#b)"
+       transform="translate(-30.767,8023.155)" />
+  </g>
+</svg>

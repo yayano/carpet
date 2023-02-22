@@ -1,7 +1,6 @@
 const Services = () => {
   return (
     <div className="services-container">
-      <h1>SERVICES</h1>
       <div className="services">
         <div className="service-1">
           <h1>service 1</h1>

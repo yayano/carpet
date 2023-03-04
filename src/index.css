@@ -29,7 +29,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  height: 400px;
+  height: 350px;
   max-height: 400px;
   z-index: -1;
   background: url("../images/cover.jpg");
@@ -73,7 +73,7 @@ section {
   font-weight: 600;
 }
 .nav-bar {
-  margin-top: 320px;
+  margin-top: 270px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -259,6 +259,12 @@ section {
   margin: 0;
 }
 
+/*home grid style*/
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .home-container {
   position: relative;
   text-align: left;
@@ -339,4 +345,14 @@ section {
 .button-86:active::after {
   transition: 0s;
   transform: translate(0, 5%);
+}
+
+.slider {
+  background-image: url("../images/service0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -100px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
 }

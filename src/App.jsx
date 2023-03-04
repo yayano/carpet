@@ -1,17 +1,22 @@
 import ContactArea from "./component/ContactArea";
-import Footer from "./component/Footer";
 import NavBar from "./component/NavBar";
 import Home from "./pages/Home";
-import Services from "./pages/Services";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Demo from "./component/Demo";
+import CoverArea from "./component/CoverArea";
 
 function App() {
   return (
     <div className="App">
       <ContactArea />
-      <NavBar />
-      <Home />
-      <Services />
-      <Footer />
+      <CoverArea />
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route strict path="/" element={<Home />} />
+          <Route strict path="/demo" element={<Demo />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

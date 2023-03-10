@@ -1,5 +1,3 @@
-// import Demo from "../component/Demo";
-// import { Map, GoogleApiWrapper } from "google-map-react";
 const Home = () => {
   return (
     <div className="home">

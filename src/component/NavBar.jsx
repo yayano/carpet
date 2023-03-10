@@ -10,11 +10,8 @@ const NavBar = () => {
 
         <Link to="/about">About us</Link>
 
-        <Link to="/services">Services</Link>
-
         <Link to="/contact">Contact us</Link>
         <Link to="/demo">Simulator</Link>
-        <Link to="/demo">Sitemap</Link>
       </nav>
     </div>
   );

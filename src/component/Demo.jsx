@@ -1,23 +1,43 @@
 import { useState } from "react";
+import CarpetNumber from "./CarpetNumber";
 const Demo = () => {
   const [width, setWidth] = useState("");
   const [height, setHeight] = useState("");
-  const [quantity, setQuantity] = useState("");
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
   const [price, setPrice] = useState("");
   const [delay, setDelay] = useState("");
   const [generate, setGenerate] = useState(false);
+  const [visible, setVisible] = useState(true);
   const handleSubmit = (e) => {
     e.preventDefault();
     setGenerate(true);
-    setDelay(2);
-    setPrice(2000);
+    const size = width * height;
+    switch (true) {
+      case size <= 1:
+        setPrice(500);
+        setDelay(1);
+        break;
+      case 1 < size && size <= 2:
+        setPrice(1000);
+        setDelay(1);
+        break;
+      case 2 < size:
+        setPrice(500 * size);
+        setDelay(size / 3);
+        break;
+    }
   };
   const handleClick = () => {
     setGenerate(false);
     setDelay(0);
     setPrice(0);
+  };
+  const handleOrder = () => {
+    const user = { name, email, phone, price };
   };
   return (
     <div className="demo">
@@ -29,13 +49,10 @@ const Demo = () => {
           Email : <span>{email}</span>{" "}
         </p>
         <p>
-          quantity : <span>{quantity}</span> Carpets
+          phone : <span>{phone}</span>
         </p>
         <p>
-          largeur : <span>{width}</span> cm
-        </p>
-        <p>
-          hauteur : <span>{height}</span> cm
+          addresse : <span>{address}</span>
         </p>
       </div>
       {generate && (
@@ -47,7 +64,7 @@ const Demo = () => {
             delay : <span>{delay}</span> day
           </p>
           <div className="butt">
-            <button onClick={handleClick}>order</button>
+            <button onClick={handleOrder}>order</button>
             <button onClick={handleClick}>cancel</button>
           </div>
         </div>
@@ -71,28 +88,22 @@ const Demo = () => {
         </div>
         <div className="input-container">
           <input
-            type="Number"
-            value={quantity}
-            placeholder="Quantity"
-            onChange={(e) => setQuantity(e.target.value)}
+            type="text"
+            value={phone}
+            placeholder="phone"
+            onChange={(e) => setPhone(e.target.value)}
           />
         </div>
         <div className="input-container">
           <input
-            type="Number"
-            value={width}
-            placeholder="Largeur"
-            onChange={(e) => setWidth(e.target.value)}
+            type="text"
+            value={address}
+            placeholder="Addresse"
+            onChange={(e) => setAddress(e.target.value)}
           />
         </div>
-        <div className="input-container">
-          <input
-            type="Number"
-            value={height}
-            placeholder="Hauteur"
-            onChange={(e) => setHeight(e.target.value)}
-          />
-        </div>
+
+        {visible && <CarpetNumber visible={visible} />}
         <button>Generate</button>
       </form>
     </div>

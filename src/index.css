@@ -468,3 +468,7 @@ section {
   border-radius: 10px;
   margin-left: 40px;
 }
+.final-result {
+  background-color: #47c869;
+  font-size: larger;
+}

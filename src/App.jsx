@@ -18,7 +18,6 @@ function App() {
           <Route strict path="/demo" element={<Demo />} />
         </Routes>
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }

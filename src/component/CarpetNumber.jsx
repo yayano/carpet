@@ -1,11 +1,9 @@
 import { useState } from "react";
 
-const CarpetNumber = () => {
+const CarpetNumber = (props) => {
   const [inputField, setInputFields] = useState([
     { name: "", width: 0, height: 0 },
   ]);
-  const [space, setSpace] = useState([{ space: 0, name: "" }]);
-  const [isAddCarpets, setIsAddCarpets] = useState(false);
   const handleInputOnchange = (event, index) => {
     let data = [...inputField];
     data[index][event.target.name] = event.target.value;
@@ -26,14 +24,14 @@ const CarpetNumber = () => {
   const submit = (event) => {
     event.preventDefault();
     let data = [...inputField];
-
-    let spaceData = [...data];
+    let spaceData = [...inputField];
     for (let i = 0; i < data.length; i++) {
       spaceData[i].space = data[i].width * data[i].height;
       spaceData[i].name = `carpet${i}`;
+      spaceData[i].price = (spaceData[i].space / 100) * 500;
+      spaceData[i].delay = Math.round(spaceData[i].space / 100 / 500) + 1;
     }
-    setSpace(spaceData);
-    console.log(space);
+    props.getData(spaceData);
   };
   return (
     <div className="carpet-number">

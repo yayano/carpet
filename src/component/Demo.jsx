@@ -1,9 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CarpetNumber from "./CarpetNumber";
 const Demo = () => {
-  const [width, setWidth] = useState("");
-  const [height, setHeight] = useState("");
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -11,7 +8,12 @@ const Demo = () => {
   const [price, setPrice] = useState("");
   const [delay, setDelay] = useState("");
   const [generate, setGenerate] = useState(false);
-  const [visible, setVisible] = useState(true);
+
+  const handleData = (data) => {
+    console.log(data);
+    const user = { name, email, phone, address, data };
+    fetch("uri", () => {});
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     setGenerate(true);
@@ -103,7 +105,7 @@ const Demo = () => {
           />
         </div>
 
-        {visible && <CarpetNumber visible={visible} />}
+        <CarpetNumber getData={(data) => handleData(data)} />
         <button>Generate</button>
       </form>
     </div>

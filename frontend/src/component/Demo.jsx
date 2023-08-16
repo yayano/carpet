@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import CarpetNumber from "./CarpetNumber";
+import { useForm } from "react-hook-form";
 const Demo = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -8,16 +8,20 @@ const Demo = () => {
   const [price, setPrice] = useState("");
   const [delay, setDelay] = useState("");
   const [generate, setGenerate] = useState(false);
-
-  const handleData = (data) => {
-    console.log(data);
-    const user = { name, email, phone, address, data };
-    fetch("uri", () => {});
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const [width, setWidth] = useState("");
+  const [height, setHeight] = useState("");
+  const [size, setSize] = useState("");
+  const [background, setBackground] = useState(false);
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = () => {
+    if (errors.email) {
+    }
     setGenerate(true);
-    const size = width * height;
+    setSize(width * height);
     switch (true) {
       case size <= 1:
         setPrice(500);
@@ -60,6 +64,9 @@ const Demo = () => {
       {generate && (
         <div className="generate-price">
           <p>
+            size : <span>{size}</span> m²
+          </p>
+          <p>
             price : <span>{price}</span> da
           </p>
           <p>
@@ -71,7 +78,7 @@ const Demo = () => {
           </div>
         </div>
       )}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="input-container">
           <input
             type="text"
@@ -82,7 +89,14 @@ const Demo = () => {
         </div>
         <div className="input-container">
           <input
-            type="text"
+            type="email"
+            {...register("email", {
+              required: "Required",
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "invalid email address",
+              },
+            })}
             value={email}
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
@@ -104,8 +118,23 @@ const Demo = () => {
             onChange={(e) => setAddress(e.target.value)}
           />
         </div>
-
-        <CarpetNumber getData={(data) => handleData(data)} />
+        <div className="input-field">
+          <h2>Carpet</h2>
+          <input
+            type="Number"
+            name="width"
+            placeholder="width in meters"
+            value={width}
+            onChange={(e) => setWidth(e.target.value)}
+          />
+          <input
+            type="Number"
+            name="height"
+            placeholder="height in meters"
+            value={height}
+            onChange={(e) => setHeight(e.target.value)}
+          />
+        </div>
         <button>Generate</button>
       </form>
     </div>

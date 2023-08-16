@@ -1,4 +1,10 @@
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
+  const changeRoute = () => {
+    const path = "./demo";
+    navigate(path);
+  };
   return (
     <div className="home">
       <div className="home-grid">
@@ -15,7 +21,7 @@ const Home = () => {
             <br />
             go to the new simulator technology{" "}
           </p>
-          <button className="button-86" role="button">
+          <button className="button-86" role="button" onClick={changeRoute}>
             Try Demo
           </button>
         </div>

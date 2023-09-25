@@ -12,7 +12,7 @@ const Home = () => {
           <p className="title">
             Welcome to
             <br />
-            the Carpet Cleaner Website,
+            the Carpet Cleaner's Website,
             <br />
             We Wash All Carpets{" "}
           </p>

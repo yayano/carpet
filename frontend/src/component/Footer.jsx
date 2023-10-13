@@ -1,9 +1,10 @@
 import footer from "../../images/footer-bg.svg";
+import "./footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="row">
+      <div className="footer-container">
+        <div className="footer-row">
           <div className="footer-col">
             <h4>company</h4>
             <ul>

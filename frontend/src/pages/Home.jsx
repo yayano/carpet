@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "./home.css";
 const Home = () => {
   const navigate = useNavigate();
   const changeRoute = () => {
@@ -9,7 +10,7 @@ const Home = () => {
     <div className="home">
       <div className="home-grid">
         <div className="home-container">
-          <p className="title">
+          <p className="title text-gray-800">
             Welcome to
             <br />
             the Carpet Cleaner's Website,

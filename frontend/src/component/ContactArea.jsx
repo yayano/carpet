@@ -1,3 +1,4 @@
+import "./contactArea.css";
 const ContactArea = () => {
   return (
     <section className="contact-area">

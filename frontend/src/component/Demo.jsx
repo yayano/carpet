@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { PDFViewer } from "@react-pdf/renderer";
+import Pdf from "./PDFDocument";
 const Demo = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,6 +14,7 @@ const Demo = () => {
   const [height, setHeight] = useState("");
   const [size, setSize] = useState("");
   const [background, setBackground] = useState(false);
+  const [isPdf, setIsPdf] = useState(false);
   const {
     handleSubmit,
     register,
@@ -43,7 +46,7 @@ const Demo = () => {
     setPrice(0);
   };
   const handleOrder = () => {
-    const user = { name, email, phone, price };
+    setIsPdf(true);
   };
   return (
     <div className="demo">
@@ -73,7 +76,7 @@ const Demo = () => {
             delay : <span>{delay}</span> day
           </p>
           <div className="butt">
-            <button onClick={handleOrder}>order</button>
+            <button onClick={handleOrder}>invoice</button>
             <button onClick={handleClick}>cancel</button>
           </div>
         </div>
@@ -137,6 +140,11 @@ const Demo = () => {
         </div>
         <button>Generate</button>
       </form>
+      {generate && (
+        <PDFViewer>
+          <Pdf name="name" />
+        </PDFViewer>
+      )}
     </div>
   );
 };

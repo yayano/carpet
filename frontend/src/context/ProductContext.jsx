@@ -7,7 +7,7 @@ export const ProductsReducer = (state, action) => {
       return {
         products: action.payload,
       };
-    case "CREATE_WORKOUT":
+    case "CREATE_PRODUCT":
       return {
         products: [action.payload, ...state.products],
       };

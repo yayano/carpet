@@ -19,7 +19,7 @@ const getProduct = async (req, res) => {
 };
 
 const createProduct = async (req, res) => {
-  const { name, price } = req.body;
+  const { name, price, brand, type, warranty, rating, image } = req.body;
   const emptyFields = [];
   if (!name) {
     emptyFields.push("name");
@@ -27,13 +27,37 @@ const createProduct = async (req, res) => {
   if (!price) {
     emptyFields.push("price");
   }
+  if (!brand) {
+    emptyFields.push("brand");
+  }
+  if (!type) {
+    emptyFields.push("type");
+  }
+  if (!warranty) {
+    emptyFields.push("warranty");
+  }
+  if (!rating) {
+    emptyFields.push("rating");
+  }
+  if (!image) {
+    emptyFields.push("rating");
+  }
+
   if (emptyFields.length > 0) {
     return res
       .status(400)
       .json({ error: "please fill in all the fields", emptyFields });
   }
   try {
-    const product = await Products.create({ name, price });
+    const product = await Products.create({
+      name,
+      price,
+      brand,
+      type,
+      warranty,
+      rating,
+      image,
+    });
     res.status(200).json(product);
   } catch (error) {
     res.status(400).json({ error: error.message });

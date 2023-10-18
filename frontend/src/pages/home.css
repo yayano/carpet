@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
 /*home grid style*/
 .home-grid {
   display: grid;

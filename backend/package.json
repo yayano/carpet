@@ -8,7 +8,8 @@
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client \"",
     "server": "nodemon index.js",
-    "client": "cd .. && cd ./frontend && npm run dev"
+    "client": "cd .. && cd ./frontend && npm run dev",
+    "build": "npm i"
   },
   "author": "yaya",
   "license": "ISC",

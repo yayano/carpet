@@ -6,7 +6,7 @@ const Products = () => {
   const { products, dispatch } = useProductsContext();
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch("http://localhost:5000/products");
+      const response = await fetch("https://clean-carpet.onrender.com");
       const json = await response.json();
       if (response.ok) {
         dispatch({ type: "SET_PRODUCTS", payload: json });

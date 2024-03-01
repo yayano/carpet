@@ -1,6 +1,6 @@
 # Carpet Website
 
-Welcome to the Carpet website repository! This repository hosts the source code for the Carpet website, which is live at [https://userweb19.onrender.com/](https://tubular-donut-79d6cd.netlify.app/).
+Welcome to the Carpet website repository! This repository hosts the source code for the Carpet website, which is live at [Carpets](https://tubular-donut-79d6cd.netlify.app/).
 
 ![Carpet Website Screenshot](/frontend/Carpt.PNG)
 

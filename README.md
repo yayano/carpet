@@ -2,7 +2,7 @@
 
 Welcome to the Carpet website repository! This repository hosts the source code for the Carpet website, which is live at [https://userweb19.onrender.com/](https://userweb19.onrender.com/).
 
-![Carpet Website Screenshot](/frontend/Carpt.png)
+![Carpet Website Screenshot](/frontend/Carpt.PNG)
 
 ## Introduction
 
